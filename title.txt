@@ -1,0 +1,259 @@
+\version "2.18.2"
+
+% ****************************************************************
+% 
+% WHAT IS THIS? -- This is a LilyPond file generated from Music
+% Blocks software (Read about it at www.musicblocks.net).
+% 
+% DOWNLOAD LILYPOND -- In order to create notation with this file,
+% you will need to download and install LilyPond software onto your
+% computer (http://lilypond.org/download.html). Frescobaldi
+% software is also handy for editing LilyPond files
+% (http://frescobaldi.org/download).
+% 
+% LILYPOND INSTRUCTIONS -- For instructions on how to further
+% manipulate musical notation using LilyPond software, please
+% read the Introduction (http://lilypond.org/text-input.html) and
+% the Manual
+% (http://lilypond.org/doc/v2.18/Documentation/learning/index.html).
+% 
+% GLOSSARY -- A glossary with helpful examples may be found here
+% (http://www.lilypond.org/doc/v2.19/Documentation/music-glossary/).
+% 
+% MUTOPIA -- You may also benefit from studying scores from the
+% Mutopia Project website, which has freely sharable music notation
+% generated with LilyPond (http://www.mutopiaproject.org/).
+% 
+% LILYBIN -- You can explore your Lilypond output in a web browser at
+% (http://lilybin.com/).
+% 
+% COMMENTS -- Some of the code below is commented out. You can
+% enable it by deleting the % that precedes the text or, in the
+% case of a commented section, deleting the %{ and %} that surrounds
+% the section.
+% 
+% ****************************************************************
+
+% Please add your own name, the title of your musical creation,
+% and the intended copyright below.
+% The copyright is great for sharing (and re-sharing)!
+% Read more about it here (http://creativecommons.org/licenses/by-sa/4.0/).
+% Of course, you can use any copyright you like -- you made it!
+\header {
+   dedication = \markup {
+      \abs-fontsize #8 \sans "Made with LilyPond and Music Blocks" \with-url #"http://walterbender.github.io/musicblocks/" {
+         \abs-fontsize #8 \sans "(http://walterbender.github.io/musicblocks/)"
+      }
+   }
+   title = "My Music Blocks Creation"
+%   subtitle = "Subtitle"
+%   instrument = "Instrument"
+   composer = "Mr. Mouse"
+%   arranger = "Arranger"
+   copyright = "Mr. Mouse (c) 2017 -- CC-BY-SA"
+   tagline = "Made from Music Blocks v.2.1"
+   footer = \markup {
+      \with-url #"http://walterbender.github.io/musicblocks/" "Made with Music Blocks Software v.2.1" Engraved on \simple #(strftime "%Y-%m-%d" (localtime (current-time)))
+   }
+   currentYear = \markup {
+      \simple #(strftime "%Y" (localtime (current-time)))
+   }
+   copyTag =  " free to distribute, modify, and perform"
+   copyType = \markup {
+      \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License "
+   }
+   copyright = \markup {
+      \override #'(baseline-skip . 0 ) \right-column {
+         \sans \bold \with-url #"http://musicblocks.net" {
+            \abs-fontsize #9  "Music " \concat {
+               \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Blocks "
+            }
+         }
+      }
+      \override #'(baseline-skip . 0 ) \center-column {
+         \abs-fontsize #11.9 \with-color #grey \bold {
+            \char ##x01C0 \char ##x01C0
+         }
+      }
+      \override #'(baseline-skip . 0 ) \column {
+         \abs-fontsize #8 \sans \concat {
+            " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond software " \char ##x00A9 " " \currentYear " by " \composer " " \char ##x2014 " " \footer
+         }
+         \concat {
+            \concat {
+               \abs-fontsize #8 \sans {
+                  " " \copyType \char ##x2014 \copyTag
+               }
+            }
+            \abs-fontsize #13 \with-color #white \char ##x01C0
+         }
+      }
+   }
+   tagline = ##f
+}
+
+% To change the meter make adjustments in the following section.
+% You must also delete the % before \meter everywhere it appears below.
+meter = {
+%   \time 3/4
+%   \key c \minor
+   \numericTimeSignature
+%   \partial 4 
+%   \tempo "Andante" 4=90
+}
+
+% You can change the MIDI instruments below to anything on logo list:
+% (http://lilypond.org/doc/v2.18/documentation/notation/midi-instruments)
+
+mole = {
+\meter
+g'4 g'4 e'4 d'4 e'4 e'4 d'4 g'4 
+g'4 g'4 e'4 d'4 e'4 e'4 d'4 g'4 
+g'4 g'4 e'4 d'4 e'4 e'4 d'4 g'4 
+g'4 g'4 e'4 d'4 e'4 e'4 d'4 g'4 
+g'4 g'4 e'4 d'4 e'4 e'4 d'4 g'4  \bar "|."
+}
+
+moleVoice = \new Staff \with {
+   \clef "treble"
+   instrumentName = "mole"
+   shortInstrumentName = "ml"
+   midiInstrument = "acoustic grand"
+
+} { \clef "treble" \mole }
+
+
+\score {
+   <<
+      \moleVoice
+
+
+% GUITAR TAB SECTION
+% Delete the %{ and %} below to include guitar tablature output.
+%{
+      \new TabStaff = "guitar tab" 
+      <<
+         \clef moderntab
+         \context TabVoice = "mole" \mole
+      >>
+%}
+
+   >>
+   \layout {}
+
+% MIDI SECTION
+% Delete the %{ and %} below to include MIDI output.
+%{
+\midi {
+   \tempo 4=90
+}
+%}
+
+}
+
+% MUSIC BLOCKS CODE
+% Below is the code for the Music Blocks project that generated logo Lilypond file.
+%{
+
+[[0,["start",{"collapsed":false,"xcor":0,"ycor":0,"heading":0,"color":20,"shade":50,"pensize":5,"grey":100}],806,253,[null,56,null]],
+[1,["matrix",{"collapsed":false}],450,150,[null,2,null]],
+[2,["pitch",{}],463.5,190.5,[1,3,4,5]],
+[3,["solfege",{"value":"sol"}],537,190.5,[2]],
+[4,["number",{"value":4}],537,222,[2]],
+[5,["pitch",{}],463.5,253.5,[2,6,7,8]],
+[6,["solfege",{"value":"mi"}],537,253.5,[5]],
+[7,["number",{"value":4}],537,285,[5]],
+[8,["pitch",{}],463.5,316.5,[5,9,10,11]],
+[9,["solfege",{"value":"re"}],537,316.5,[8]],
+[10,["number",{"value":4}],537,348,[8]],
+[11,["rhythm",{}],463.5,379.5,[8,12,13,null]],
+[12,["number",{"value":8}],552.84228515625,379.5,[11]],
+[13,["number",{"value":4}],552.84228515625,411,[11]],
+[14,["action",{"collapsed":false}],100,100,[null,15,59,null]],
+[15,["text",{"value":"chunk2"}],194.5,109,[14]],
+[16,["newnote",{}],113.5,140.5,[59,62,61,60]],
+[17,["number",{"value":4}],295.22119140625,172,[62]],
+[18,["pitch",{}],127,203.5,[61,19,20,null]],
+[19,["solfege",{"value":"sol"}],200.5,203.5,[18]],
+[20,["number",{"value":4}],200.5,235,[18]],
+[21,["newnote",{}],113.5,298,[60,66,65,64]],
+[22,["number",{"value":4}],295.22119140625,329.5,[66]],
+[23,["pitch",{}],127,361,[65,24,25,null]],
+[24,["solfege",{"value":"sol"}],200.5,361,[23]],
+[25,["number",{"value":4}],200.5,392.5,[23]],
+[26,["newnote",{}],113.5,455.5,[64,70,69,68]],
+[27,["number",{"value":4}],295.22119140625,487,[70]],
+[28,["pitch",{}],127,518.5,[69,29,30,null]],
+[29,["solfege",{"value":"mi"}],200.5,518.5,[28]],
+[30,["number",{"value":4}],200.5,550,[28]],
+[31,["newnote",{}],113.5,613,[68,74,73,72]],
+[32,["number",{"value":4}],295.22119140625,644.5,[74]],
+[33,["pitch",{}],127,676,[73,34,35,null]],
+[34,["solfege",{"value":"re"}],200.5,676,[33]],
+[35,["number",{"value":4}],200.5,707.5,[33]],
+[36,["newnote",{}],113.5,770.5,[72,78,77,76]],
+[37,["number",{"value":4}],295.22119140625,802,[78]],
+[38,["pitch",{}],127,833.5,[77,39,40,null]],
+[39,["solfege",{"value":"mi"}],200.5,833.5,[38]],
+[40,["number",{"value":4}],200.5,865,[38]],
+[41,["newnote",{}],113.5,928,[76,82,81,80]],
+[42,["number",{"value":4}],295.22119140625,959.5,[82]],
+[43,["pitch",{}],127,991,[81,44,45,null]],
+[44,["solfege",{"value":"mi"}],200.5,991,[43]],
+[45,["number",{"value":4}],200.5,1022.5,[43]],
+[46,["newnote",{}],113.5,1085.5,[80,86,85,84]],
+[47,["number",{"value":4}],295.22119140625,1117,[86]],
+[48,["pitch",{}],127,1148.5,[85,49,50,null]],
+[49,["solfege",{"value":"re"}],200.5,1148.5,[48]],
+[50,["number",{"value":4}],200.5,1180,[48]],
+[51,["newnote",{}],113.5,1243,[84,90,89,88]],
+[52,["number",{"value":4}],295.22119140625,1274.5,[90]],
+[53,["pitch",{}],127,1306,[89,54,55,null]],
+[54,["solfege",{"value":"sol"}],200.5,1306,[53]],
+[55,["number",{"value":4}],200.5,1337.5,[53]],
+[56,["nameddo",{"value":"chunk2"}],819.5,293.5,[0,57]],
+[57,["savelilypond",{}],819.5,325,[56,58,null]],
+[58,["text",{"value":"title.ly"}],954.728515625,325,[57]],
+[59,["hidden",{}],113.5,140.5,[14,16]],
+[60,["hidden",{}],113.5,298,[16,21]],
+[61,["vspace",{}],127,172,[16,18]],
+[62,["divide",{}],209.72119140625,140.5,[16,63,17]],
+[63,["number",{"value":1}],295.22119140625,140.5,[62]],
+[64,["hidden",{}],113.5,455.5,[21,26]],
+[65,["vspace",{}],127,329.5,[21,23]],
+[66,["divide",{}],209.72119140625,298,[21,67,22]],
+[67,["number",{"value":1}],295.22119140625,298,[66]],
+[68,["hidden",{}],113.5,613,[26,31]],
+[69,["vspace",{}],127,487,[26,28]],
+[70,["divide",{}],209.72119140625,455.5,[26,71,27]],
+[71,["number",{"value":1}],295.22119140625,455.5,[70]],
+[72,["hidden",{}],113.5,770.5,[31,36]],
+[73,["vspace",{}],127,644.5,[31,33]],
+[74,["divide",{}],209.72119140625,613,[31,75,32]],
+[75,["number",{"value":1}],295.22119140625,613,[74]],
+[76,["hidden",{}],113.5,928,[36,41]],
+[77,["vspace",{}],127,802,[36,38]],
+[78,["divide",{}],209.72119140625,770.5,[36,79,37]],
+[79,["number",{"value":1}],295.22119140625,770.5,[78]],
+[80,["hidden",{}],113.5,1085.5,[41,46]],
+[81,["vspace",{}],127,959.5,[41,43]],
+[82,["divide",{}],209.72119140625,928,[41,83,42]],
+[83,["number",{"value":1}],295.22119140625,928,[82]],
+[84,["hidden",{}],113.5,1243,[46,51]],
+[85,["vspace",{}],127,1117,[46,48]],
+[86,["divide",{}],209.72119140625,1085.5,[46,87,47]],
+[87,["number",{"value":1}],295.22119140625,1085.5,[86]],
+[88,["hidden",{}],113.5,1400.5,[51,null]],
+[89,["vspace",{}],127,1274.5,[51,53]],
+[90,["divide",{}],209.72119140625,1243,[51,91,52]],
+[91,["number",{"value":1}],295.22119140625,1243,[90]],
+[92,2,[0,"notes","G4",0.6666666666666666,"default",null,null]],
+[93,2,[0.6666666666666666,"notes","G4",0.6666666666666666,"default",null,null]],
+[94,2,[1.3333333333333333,"notes","E4",0.6666666666666666,"default",null,null]],
+[95,2,[2,"notes","D4",0.6666666666666666,"default",null,null]],
+[96,2,[2.6666666666666665,"notes","E4",0.6666666666666666,"default",null,null]],
+[97,2,[3.333333333333333,"notes","E4",0.6666666666666666,"default",null,null]],
+[98,2,[3.9999999999999996,"notes","D4",0.6666666666666666,"default",null,null]],
+[99,2,[4.666666666666666,"notes","G4",0.6666666666666666,"default",null,null]]]
+%}
+
